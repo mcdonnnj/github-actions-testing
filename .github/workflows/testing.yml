@@ -34,6 +34,6 @@ jobs:
       - name: Print some stuff
         run: |
           echo ${{ toJson(runner) }}
-          echo ${{ toJson(job }}
+          echo ${{ toJson(job) }}
           echo ${{ toJson(steps) }}
           echo ${{ toJson(github) }}
