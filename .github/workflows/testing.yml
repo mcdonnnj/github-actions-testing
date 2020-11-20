@@ -19,14 +19,16 @@ jobs:
           python-version: 3.9
       - name: Cache -${{ github.job }}- environments
         uses: actions/cache@v2
+        env:
+          CACHE_KEY: "${{ github.job }}-${{ runner.os }}-\
+            py${{ steps.setup-python.outputs.python-version }}"
         with:
           path: |
             ${{ env.PIP_CACHE_DIR }}
-          key: "${{ github.job }}-${{ runner.os }}-\
-            py${{ steps.setup-python.outputs.python-version }}"
-          restore-keys: "${{ github.job }}-${{ runner.os }}-\
-            py${{ steps.setup-python.outputs.python-version }}-\n
-            lint-${{ runner.os }}-"
+          key: "${{ env.CACHE_KEY }}"
+          restore-keys: |
+            ${{ env.CACHE_KEY }}
+            ${{ github.job }}-${{ runner.os }}-"
       - name: Install some pip packages
         id: install-pip-packages
         run: |
