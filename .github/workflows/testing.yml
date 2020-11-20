@@ -1,5 +1,5 @@
 ---
-name: build
+name: testing
 
 on:
   push:
@@ -35,5 +35,4 @@ jobs:
       - name: Print some stuff
         run: |
           echo ${{ runner }}
-          echo ${{ jobs }}
           echo ${{ steps }}
