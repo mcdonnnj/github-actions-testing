@@ -1,0 +1,39 @@
+---
+name: build
+
+on:
+  push:
+  pull_request:
+
+env:
+  PIP_CACHE_DIR: ~/.cache/pip
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - id: setup-python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Cache linting environments
+        uses: actions/cache@v2
+        with:
+          path: |
+            ${{ env.PIP_CACHE_DIR }}
+          key: "install-${{ runner.os }}-\
+            py${{ steps.setup-python.outputs.python-version }}"
+          restore-keys: "install-${{ runner.os }}-\
+            py${{ steps.setup-python.outputs.python-version }}-\n
+            lint-${{ runner.os }}-"
+      - name: Install some pip packages
+        id: install-pip-packages
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install --upgrade --requirement requirements-test.txt
+      - name: Print some stuff
+        run: |
+          echo ${{ runner }}
+          echo ${{ jobs }}
+          echo ${{ steps }}
