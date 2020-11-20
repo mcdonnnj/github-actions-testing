@@ -33,6 +33,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
       - name: Print some stuff
         run: |
-          echo ${{ runner.toString() }}
-          echo ${{ steps.toString() }}
-          echo ${{ github.toString() }}
+          echo ${{ toJson(runner) }}
+          echo ${{ toJson(job }}
+          echo ${{ toJson(steps) }}
+          echo ${{ toJson(github) }}
