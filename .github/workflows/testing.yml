@@ -22,9 +22,9 @@ jobs:
         with:
           path: |
             ${{ env.PIP_CACHE_DIR }}
-          key: "install-${{ runner.os }}-\
+          key: "${{ github.job }}-${{ runner.os }}-\
             py${{ steps.setup-python.outputs.python-version }}"
-          restore-keys: "install-${{ runner.os }}-\
+          restore-keys: "${{ github.job }}-${{ runner.os }}-\
             py${{ steps.setup-python.outputs.python-version }}-\n
             lint-${{ runner.os }}-"
       - name: Install some pip packages
