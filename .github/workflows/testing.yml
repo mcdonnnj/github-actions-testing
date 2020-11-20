@@ -28,7 +28,7 @@ jobs:
           key: "${{ env.CACHE_KEY }}"
           restore-keys: |
             ${{ env.CACHE_KEY }}
-            ${{ github.job }}-${{ runner.os }}-"
+            ${{ github.job }}-${{ runner.os }}-
       - name: Install some pip packages
         id: install-pip-packages
         run: |
