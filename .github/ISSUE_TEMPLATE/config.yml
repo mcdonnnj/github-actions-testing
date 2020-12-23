@@ -1,6 +1,9 @@
 ---
 blank_issues_enabled: false
 contact_links:
+  - name: Ask Google
+    url: https://google.com
+    about: Googling can be useful.
   - name: Questions
     url: /discussions
     about: Please ask and answer questions here.
