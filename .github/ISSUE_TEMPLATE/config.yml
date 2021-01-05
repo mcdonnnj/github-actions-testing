@@ -4,3 +4,6 @@ contact_links:
   - name: Questions
     url: https://github.com/mcdonnnj/.github/QUESTIONS.md
     about: Please see here for common questions and topics.
+  - name: Discussions
+    url: ../discussions
+    about: Check this project's discussions.
