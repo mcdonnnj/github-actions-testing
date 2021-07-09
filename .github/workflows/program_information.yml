@@ -1,0 +1,19 @@
+---
+name: program_information
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  get_information:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Packer location
+        run: command -v packer
+      - name: Get Packer version
+        run: packer --version
+      - name: Get Terraform location
+        run: command -v terraform
+      - name: Get Terraform version
+        run: terraform --version
