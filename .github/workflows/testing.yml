@@ -84,3 +84,21 @@ jobs:
         env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
+  program_versions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup program versions
+        uses: cisagov/setup-env-github-action@develop
+        id: cisagov-versions
+      - name: Print environment versions
+        run: |
+          echo ${PACKER_VERSION}
+          echo ${TERRAFORM_VERSION}
+          echo ${TERRAFORM_DOCS_VERSION}
+      - name: Print action output versions
+        run: |
+          echo ${{steps.cisagov-versions.outputs.PACKER_VERSION}}
+          echo ${{steps.cisagov-versions.outputs.TERRAFORM_VERSION}}
+          echo ${{steps.cisagov-versions.outputs.TERRAFORM_DOCS_VERSION}}
+      - name: Print any action outputs
+        run: echo ${{steps.cisagov.versions.outputs}}
