@@ -1,7 +1,8 @@
 group_outputs = {
   "Testing log grouping": "This should be in a group.",
   "Second log group": "Hello, world!",
-  "Incoming Message": "We require more vespene gas!"
+  "Incoming Message": "We require more vespene gas!",
+  "mcdonnnj/best-repo-ever": "Simply the best. Better than all the rest.",
 }
 
 
