@@ -1,7 +1,10 @@
 import logging
+import sys
 
 logging.basicConfig(
-    format="%(asctime)-15s %(levelname)s %(message)s", level=logging.INFO
+    format="%(asctime)-15s %(levelname)s %(message)s",
+    level=logging.INFO,
+    stream=sys.stdout,
 )
 
 group_outputs = {
