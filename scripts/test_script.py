@@ -23,4 +23,8 @@ logging.info("::group::Logging test")
 logging.info("Hello, world!")
 logging.info("::endgroup::")
 
+print("::group::Logging test #2")
+logging.info("Hello, again!")
+print("::endgroup::")
+
 print("Finishing output.")
