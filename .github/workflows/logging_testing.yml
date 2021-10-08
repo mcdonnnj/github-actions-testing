@@ -1,4 +1,6 @@
 ---
+name: logging_testing
+
 on:
   workflow_dispatch:
 
@@ -8,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Test the script
-        run: python3 scripts/test_script.py
+        run: python3 scripts/test_script.py 2>&1
