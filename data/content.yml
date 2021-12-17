@@ -1,0 +1,15 @@
+---
+version: "1.0"
+skeletons:
+  - name: skeleton-ansible-role
+    description: The base skeleton repository for Ansible projects.
+    url: https://github.com/cisagov/skeleton-ansible-role
+  - name: skeleton-generic
+    description: The base skeleton repository.
+    url: https://github.com/cisagov/skeleton-generic
+  - name: skeleton-packer
+    description: The base skeleton repository for Packer projects.
+    url: https://github.com/cisagov/skeleton-packer
+  - name: skeleton-python-library
+    description: The base skeleton repository for Python projects.
+    url: https://github.com/cisagov/skeleton-python-library
