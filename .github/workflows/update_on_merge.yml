@@ -4,7 +4,7 @@ name: update_on_merge
 on:
   push:
     branches:
-      - testing/merge_on_commit_base
+      - testing/commit_on_merge_base
 
 jobs:
   update:
