@@ -2,13 +2,12 @@
 name: update_on_merge
 
 on:
-  pull_request:
-    branch:
+  push:
+    branches:
       - testing/merge_on_commit_base
 
 jobs:
   update:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
