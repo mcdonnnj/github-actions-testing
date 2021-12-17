@@ -4,6 +4,9 @@ skeletons:
   - name: skeleton-ansible-role
     description: The base skeleton repository for Ansible projects.
     url: https://github.com/cisagov/skeleton-ansible-role
+  - name: skeleton-docker
+    description: The base skeleton repository for Docker projects.
+    url: https://github.com/cisagov/skeleton-docker
   - name: skeleton-generic
     description: The base skeleton repository.
     url: https://github.com/cisagov/skeleton-generic
