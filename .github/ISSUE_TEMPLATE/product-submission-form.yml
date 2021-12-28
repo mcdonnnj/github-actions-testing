@@ -27,16 +27,6 @@ body:
       placeholder: v2; 1.5; >3; >=4; >5, <6; etc.
     validations:
       required: true
-  - type: markdown
-    attributes:
-      value: |
-        Please see the information below when selecting the appropriate status.
-
-        - Unknown - Status unknown. Default choice.
-        - Affected - Reported to be affected by CVE-2021-44228.
-        - Not Affected - Reported to NOT be affected by CVE-2021-44228 and no further action necessary.
-        - Fixed - Patch and/or mitigations available (see provided links).
-        - Under Investigation - Vendor investigating status.
   - type: dropdown
     id: product-status
     attributes:
@@ -50,6 +40,16 @@ body:
         - Under Investigation
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: |
+        Please see the information below when selecting the appropriate status.
+
+        - Unknown - Status unknown. Default choice.
+        - Affected - Reported to be affected by CVE-2021-44228.
+        - Not Affected - Reported to NOT be affected by CVE-2021-44228 and no further action necessary.
+        - Fixed - Patch and/or mitigations available (see provided links).
+        - Under Investigation - Vendor investigating status.
   - type: dropdown
     id: product-updated
     attributes:
