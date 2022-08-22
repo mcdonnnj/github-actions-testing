@@ -4,6 +4,7 @@ name: testing
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 env:
   PIP_CACHE_DIR: ~/.cache/pip
