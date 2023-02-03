@@ -7,15 +7,18 @@ on:
 
 jobs:
   test_one:
-    runs-on: ubuntu-latest
+    name: "${{ matrix.name }}"
+    runs-on: "${{ matrix.os }}"
     strategy:
       matrix:
         include:
           - arch: amd64
             name: ubuntu-amd64
+            os: ubuntu-latest
             os-shortname: ubuntu
           - arch: arm64
             name: ubuntu-arm64
+            os: ubuntu-latest
             os-shortname: ubuntu
     steps:
       - run: echo "${{ matrix.os-shortname }}-${{ matrix.arch }}"
