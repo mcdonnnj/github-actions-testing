@@ -7,12 +7,10 @@ on:
 
 jobs:
   test_one:
-    name: "Test include with static value"
-    runs-on: ${{ matrix.os }}
+    name: "Test with include only matrix"
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os:
-          - ubuntu-latest
         include:
           - arch: amd64
             name: ubuntu-amd64
