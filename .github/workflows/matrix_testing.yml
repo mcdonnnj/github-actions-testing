@@ -1,0 +1,24 @@
+---
+name: Matrix Testing
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test_one:
+    name: "Test include with static value"
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+        include:
+          - arch: amd64
+            name: ubuntu-amd64
+            os-shortname: ubuntu
+          - arch: arm64
+            name: ubuntu-arm64
+            os-shortname: ubuntu
+    steps:
+      - run: echo "${{ matrix.os-shortname }}-${{ matrix.arch }}"
