@@ -1,6 +1,6 @@
 # GitHub Actions Testing 🧰 #
 
-[![GitHub Build Status](https://github.com/cisagov/skeleton-generic/workflows/build/badge.svg)](https://github.com/cisagov/skeleton-generic/actions)
+[![GitHub Build Status](https://github.com/mcdonnnj/github-actions-testing/workflows/build/badge.svg)](https://github.com/mcdonnnj/github-actions-testing/actions)
 [![GHA Status: testing](https://github.com/mcdonnnj/github-actions-testing/workflows/testing/badge.svg)](https://github.com/mcdonnnj/github-actions-testing/actions/workflows/testing.yml)
 
 ## Information ##
