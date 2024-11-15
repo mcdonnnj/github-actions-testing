@@ -25,7 +25,7 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: mcdonnnj/actions-permissions/monitor@main
+      - uses: mcdonnnj/actions-permissions/monitor@improvement/install_mitmproxy_from_pypi_again
       - uses: actions/checkout@v4
 
       # test github-script CA
