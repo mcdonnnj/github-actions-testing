@@ -59,7 +59,7 @@ jobs:
     permissions:
       # Permissions required by actions/labeler
       contents: read
-      issues: read
+      issues: write
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
