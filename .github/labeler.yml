@@ -3,10 +3,15 @@
 # if there is a match based on the matching rules for the entry. Please see
 # the actions/labeler documentation for more information:
 # https://github.com/actions/labeler#match-object
+
 ansible:
   - changed-files:
       - any-glob-to-any-file:
-          - ansible/**
+          - "**/ansible/**"
+# ansible:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - ansible/**
 documentation:
   - changed-files:
       - any-glob-to-any-file:
