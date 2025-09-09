@@ -13,15 +13,15 @@ jobs:
       matrix:
         os:
         - ubuntu-latest # eventually will pick up the next version and test it
-        - ubuntu-24.04 # beta
-        - ubuntu-22.04 # ubuntu-latest
-        - ubuntu-20.04
+        - ubuntu-24.04 # ubuntu-latest
+        - ubuntu-24.04-arm # beta
+        - ubuntu-22.04
+        - ubuntu-22.04-arm # beta
         - macos-latest # eventually will pick up the next version and test it
         - macos-14 # macos-latest
         - macos-13
-        - macos-12
-        #- windows-2022 # windows-latest
-        #- windows-2019
+        # - windows-2022 # windows-latest
+        # - windows-2019
 
     runs-on: ${{ matrix.os }}
     steps:
